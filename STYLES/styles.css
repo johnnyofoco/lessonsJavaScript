@@ -1,0 +1,56 @@
+/*############  GLOBAL ################*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: #491192;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+
+/*############  HEADER ################*/
+
+header{
+    height: 10vh;
+}
+
+h1{
+    padding: 20px;
+    text-align: center;
+}
+
+/*############  NAV ################*/
+
+nav{
+    height: 5vh;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*############  MAIN ################*/
+
+main{
+    height: calc(80vh - 2px);
+
+}
+
+p{
+    text-align: center;
+}
+
+/*############  FOOTER ################*/
+
+footer{
+    height: 5vh;
+
+}
+
+
+
