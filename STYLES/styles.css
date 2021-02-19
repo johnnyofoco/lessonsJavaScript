@@ -48,8 +48,13 @@ p{
 /*############  FOOTER ################*/
 
 footer{
+    color: red;
     height: 5vh;
 
+}
+
+footer a{
+    text-decoration: none;
 }
 
 
