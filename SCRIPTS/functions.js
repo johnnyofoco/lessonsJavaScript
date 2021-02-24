@@ -53,4 +53,33 @@ sayMyName(
 */
 
 //Funções construtoras
+/*
+//expressão new
+//criar um novo objeto
+//this keyword
 
+function Person(name) {
+    this.name = name
+}
+
+const mayk = new Person("Johnny Uow")
+console.log(mayk)
+*/
+
+/*
+   Prototype
+
+   *prototype-based language
+   * prototype chain
+   * __proto__
+   * ex: "Johnny".__proto__
+*/
+
+/* 
+    Type conversion (typecasting)
+    x
+    Type coersion
+    (Alteração de um tipo de dado para outro tipo)
+
+    
+*/
