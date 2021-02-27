@@ -390,7 +390,7 @@ console.log(calculate(500, '%', 353))
 
 
 //THROW
-
+/*
 function sayMyName(name = '') {
     console.log(name)
     if (name === '') {
@@ -405,3 +405,55 @@ try {
 } catch (e) {
     console.log(e)
 }
+*/
+
+/* ESTRUTURA DE REPETIÇÃO
+
+//FOR
+
+for(let i=0; i<100; i++){
+
+    if(i === 50){
+        break; //para a execução
+    }
+
+    if(i === 40){
+        continue //pula a execução
+    }
+    console.log(i)
+}
+
+//WHILE
+
+let i = 0;
+
+while(i <10){
+    console.log(i)
+    
+    i++;
+}
+
+//FOR OF
+let name = 'Johnny'
+let names =  ['João', 'Maria', 'Joaquim']
+
+for(let element of names ){
+    console.log(element)
+}
+
+//FOR IN
+
+let person = {
+    name: 'John',
+    age: 30,
+    weight: 88.6
+}
+
+for (let property in person) {
+    console.log(`PROPRIEDADE: ${property} / VALOR: ${person[property]}`)
+}
+
+
+
+*/
+
