@@ -2,11 +2,11 @@
 
 Crie um algortimo que transforme as notas do sitema numérico para sistema de notas em caracteres tipo A B C
 
-* de 90 para cima - A 
-* entre 80 - 89   - B 
-* entre 70 - 79   - C 
-* entre 60 - 69   - D 
-* menor que 60    - E 
+* de 90 para cima - A
+* entre 80 - 89   - B
+* entre 70 - 79   - C
+* entre 60 - 69   - D
+* menor que 60    - E
 
 
 
@@ -102,24 +102,137 @@ calculateBalance()
   C = (F-32) * 5/9
   F = C * 9/5 + 32
 
-*/
 
-let temperature = "36c"
+function temperatureConversion(degree) {
+    const celsiusExists = degree.toUpperCase().includes('C')
+    const fahrenheitExists = degree.toUpperCase().includes('F')
 
-function temperatureConversion(String) {
-    let type = this.charAt(3)
+    if (!celsiusExists && !fahrenheitExists) {
+        throw new Error('Temperatura inválida')
 
-    if (type === 'C' || type === 'c') {
-        temp = (temp * (9 / 5)) + 32
-        console.log(`Temperatura: Celcius, convertida em Fahrenheit: ${temp}º`)
-    } else if (type === 'F' || type === 'f') {
-        temp = (temp - 32) * (5 / 9)
-        console.log(`Temperatura: Fahrenheit, convertida em Celcius: ${temp}º`)
-    } else {
-        console.log('Temperatura inválida')
+    } else if (celsiusExists) {
+        console.log(`Temperatura informada: ${degree.toUpperCase()}`)
+        upgradeDegree = Number(degree.toUpperCase().replace("C", ""))
+        upgradeDegree = (upgradeDegree * (9 / 5)) + 32
+        console.log(`Convertida em Fahrenheit: ${upgradeDegree}ºF`)
+
+    } else if (fahrenheitExists) {
+        console.log(`Temperatura informada: ${degree.toUpperCase()}`)
+        upgradeDegree = Number(degree.toUpperCase().replace("F", ""))
+        upgradeDegree = (upgradeDegree - 32) * (5 / 9)
+        console.log(`Convertida em Celsius: ${upgradeDegree}ºC`)
     }
 
-    return
 }
 
-temperatureConversion(temperature)
+try {
+    temperatureConversion('10f')
+} catch (error) {
+    console.log(error.message)
+}
+*/
+
+
+/* Baseado no Array de Livros por categoria abaixo, faça os seguintes desafios
+
+    * [FEITO!]Contar o número de categorias e o número de livros em cada categoria
+    * [FEITO!]Contar o número de autores
+    * [FEITO!]Mostrar livros do autor Augusto Cury
+    * Transformar a função acima de uma função que irá receber o nome do autor e devolver os livros desse autor.
+
+*/
+/*
+//Objeto principal
+const booksByCategory = [
+    {
+        category: "Riqueza",
+        books: [
+            {
+                title: "Os segredos da mente milionária",
+                author: "T. Harv Eker"
+            },
+            {
+                title: "O Homem mais rico da Babilônia",
+                author: "George S. Clason"
+            },
+            {
+                title: "Pai rico, pai pobre",
+                author: "Robert T. Kiyosaki e Sharon L. Lechter"
+            },
+        ],
+    },
+    {
+        category: "Inteligência Emocional",
+        books: [
+            {
+                title: "Você é Insubstituiível",
+                author: "Augusto Cury"
+            },
+            {
+                title: "Ansiedade - Como enfrentar o mal do século",
+                author: "Augusto Cury"
+            },
+            {
+                title: "Os 7 hábitos das pessoas altamente eficazes",
+                author: "Stephen R. Covey"
+            },
+        ]
+    }
+]
+
+const totalCategories = booksByCategory.length
+
+console.log('Total de categorias: ', totalCategories);
+for (let category of booksByCategory) {
+    console.log('Total de livros da categoria: ', category.category, ': ', category.books.length)
+}
+
+function countAuthors() {
+    let authors = [];
+
+    for (let category of booksByCategory) {
+        for (let book of category.books) {
+            if (authors.indexOf(book.author) == -1) {
+                authors.push(book.author)
+            }
+        }
+    }
+
+    console.log('Total de autores:', authors.length)
+}
+
+countAuthors()
+
+function booksOfAugustoCury() {
+    let books = [];
+
+    for (let category of booksByCategory) {
+        for (let book of category.books) {
+            if (book.author === 'Augusto Cury') {
+                books.push(book.title)
+            }
+        }
+    }
+
+    console.log('Livros do Augusto Cury:', books)
+}
+
+booksOfAugustoCury()
+
+function booksOfAuthor(authorName) {
+    let books = [];
+
+    for (let category of booksByCategory) {
+        for (let book of category.books) {
+            if (book.author === authorName) {
+                books.push(book.title)
+            }
+        }
+    }
+
+    console.log('Livros do Autor:', authorName, ': ', books.join(", "))
+}
+
+booksOfAuthor('Augusto Cury')
+*/
+
